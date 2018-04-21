@@ -1,0 +1,15 @@
+{
+  "name": "Kailu",
+  "version": "1.0.0",
+  "description": "An app where the user create polls and vote on it",
+  "main": "index.js",
+  "author": "kayalur@purdue.edu",
+  "license": "none",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "eslint": "^4.19.1",
+    "express": "^4.16.3",
+    "nodemon": "^1.17.3"
+  },
+  "repository": "https://github.com/KailuOrton/cs252P.git"
+}
