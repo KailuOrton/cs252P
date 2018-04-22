@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+    background-color: rgb(44, 125, 120);
+    background: url(mexico.jpg); 
+    background-size: cover;
+        
+    font-family: sans-serif;
+}
+* {box-sizing: border-box}
+
+
+
+/* Set a style for all buttons */
+button {
+    background-color: rgb(40, 76, 76);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    background-position: center;
+}
+
+
+button:hover {
+    opacity:0.8;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.vote {
+    background-color:  rgb(191, 53, 53);
+    float: left;
+    width: 45%;
+}
+.post {
+  float: right;
+  width: 45%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 100px;
+}
+
+
+</style>
+<body>
+
+
+  <div class="container">
+    <center>
+    <h1>Vote or Post</h1>
+    <p>Choose one to begin!</p>
+    </center>
+    <br>
+
+        <form action = "post.html">
+            <button type="submit" class="post">Post</button>
+        </form>
+
+        <form action = "vote.html">
+            <button type="submit" class="vote">Vote</button>
+        </form>
+    
+  </div>
+
+
+</body>
+</html>
