@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+body {
+    background-color: rgb(44, 125, 120);
+    background: url(mexico.jpg); 
+    background-size: cover;
+        
+    font-family: sans-serif;
+}
+
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+label{
+    text-align:right;
+    font-size: 150%;
+    color: rgb(18, 40, 40);
+}
+
+button {
+    background-color: rgb(40, 76, 76);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    background-position: center;
+}
+
+button:hover {
+    opacity:0.8;
+}
+
+.signupbox {
+        width: 320px;
+        height:420px;
+        background: transparent;
+        color: rgb(44, 125, 120);
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+}
+
+</style>
+<body>
+
+<form>
+  <div class="container">
+    <h1 style = "text-align: center">Sign Up</h1>
+    <p style = "text-align: center">Create an account!</p>
+    
+    <div class = "signupbox">
+        <label for="user"><b>Choose a username</b></label>
+        <input type="text" placeholder="Enter Username" name="user" required autofocus>
+
+        <label for="pass"><b>Choose a password</b></label>
+        <input type="password" placeholder="Enter Password" name="pass" required>
+
+        <label for="reppass"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="reppass" required>
+    
+    
+        <br>
+        <button type="submit" class="signupbtn">Sign Up</button>
+    
+    </div>
+
+  </div>
+</form>
+
+</body>
+</html>
