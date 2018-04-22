@@ -10,14 +10,21 @@
     "babel": "^6.23.0",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
+    "compression": "^1.7.2",
     "dotenv": "^5.0.1",
     "eslint": "^4.19.1",
     "express": "^4.16.3",
+    "helmet": "^3.12.0",
     "jsonwebtoken": "^8.2.1",
     "mongoose": "file:mongoose",
     "morgan": "^1.9.0",
     "nodemon": "^1.17.3",
     "sudo": "^1.0.3"
   },
-  "repository": "https://github.com/KailuOrton/cs252P.git"
+  "repository": "https://github.com/KailuOrton/cs252P.git",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0"
+  }
 }

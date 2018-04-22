@@ -5,35 +5,65 @@ var dbs = 'mongodb://localhost:27017/cs252-votingApp';
 var port = process.env.PORT || 8000;
 
 //Loading in the node modules
+var _mongoose = require("mongoose");
+
+var _mongoose2 = _interopRequireDefault(_mongoose);
+
+var _constants = require("./constants");
+
+var _constants2 = _interopRequireDefault(_constants);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+require("babel-core").transform("code", {
+  plugins: ["transform-es2015-modules-commonjs"]
+});
+//var middlewaresConfig = require('./middleware');
 var express = require('express');
 var morgan = require('morgan'); 
-var mongoose = require('mongoose');
+//var mongoose = require('mongoose');
 var bp = require('body-parser');
 var de = require('dotenv');
 
+//remove warnings
+_mongoose2.Promise = global.Promise;
+
 //create an express app that enables use of middleware
 var app = express();
+
+//converted es6 to commonjs code
+var _middlewares = require("./middleware");
+
+var _middlewares2 = _interopRequireDefault(_middlewares);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+require("babel-core").transform("code", {
+  plugins: ["transform-es2015-modules-commonjs"]
+});
+
+(0, _middlewares2.default)(app);
 
 //load in environment varibales
 de.config({ verbose: true });
 
 //Setup the databse connection
-mongoose.connect(dbs, function(err){
+_mongoose.connect(dbs, function(err) {
 	if(err){
 		console.log(err);
-	} 
+	}
 });
 
 //Monitoring the DB connection events
-mongoose.connection.on('connected', function(){
+_mongoose.connection.on('connected', function(){
 	console.log('Successfully opened a connection to ' + dbs);
 });
 
-mongoose.connection.on('disconnected', function(){
+_mongoose.connection.on('disconnected', function(){
 	console.log('Successfully disconnected from ' + dbs);
 });
 
-mongoose.connection.on('error', function(){
+_mongoose.connection.on('error', function(){
 	console.log('Error has occured connecting to ' + dbs);
 });
 
@@ -41,6 +71,7 @@ mongoose.connection.on('error', function(){
 app.use(morgan('dev'));
 app.use(bp.json());
 app.use(bp.urlencoded({ extended: false }));
+app.use('/node_modules', express.static(__dirname + '/node_modules'));
 app.use(express.static(__dirname + '/public'));
 app.get("*", function(request, response){
 	response.sendFile(__dirname + '/public/index.html');
@@ -50,3 +81,5 @@ app.get("*", function(request, response){
 app.listen(port, function(){
 	console.log('Listening on ' + port);
 });
+
+console.log(process.env.secret);
