@@ -15,7 +15,11 @@
 	}
 
 	body{
-		background-color: rgb(44, 125, 120); 
+		background-color: rgb(44, 125, 120);
+		background: url(mexico.jpg); 
+		background-size: cover;
+		
+		font-family: sans-serif;
 	}
 	label{
 		text-align:right;
@@ -30,6 +34,8 @@
     	display: inline-block;
     	border: 1px solid #ccc;
    		box-sizing: border-box;
+   		
+
 
    	}
 
@@ -41,10 +47,32 @@
     	border: none;
     	cursor: pointer;
     	width: 100%;
+    	background-position: center;
 	}
 
 	button:hover {
     	opacity: 0.8;
+	}
+
+
+	.loginbox{
+		width: 320px;
+		height:420px;
+		background: transparent;
+		color: rgb(44, 125, 120);
+		top: 50%;
+		left: 50%;
+		position: absolute;
+		transform: translate(-50%, -50%);
+		box-sizing: border-box;
+	}
+
+	.loginbox a:hover{
+		opacity: 0.8;
+	}
+
+	a{
+		color: rgb(44, 125, 120);
 	}
 
 </style>
@@ -56,16 +84,25 @@
 
 <h2>Login</h2>
 
+<div class = "loginbox">
 <form>
+
+
+	
+
 	<label for="user"><b>Username</b></label><br>
 	<input type = "text" required="Please enter a username" placeholder="Username" autofocus name = "user">
 	<br>
+	
 	<br>
 	<label for="pass"><b>Password</b></label><br>
 	<input type = "password" required="Please enter a password" placeholder="Password" name = "pass">
 	<br>
 	<button type = "submit" title="Press this to Login">Login!</button>
-	
+	<br><br>
+	No account? <a href="signup.html">Sign up</a>
+
+	</div>
 </form>
 
 
