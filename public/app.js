@@ -8,6 +8,13 @@ var config = {
     messagingSenderId: "820921347318"
   };
   firebase.initializeApp(config);
+  var database = firebase.database();
+  /*var ref1 = database.ref('posts');
+  var c = ref1.set({
+    question: "who r u",
+    a1: "eric",
+    a2: "kailu"
+  });
 
 /*function initApp(){
   //Get all elements
