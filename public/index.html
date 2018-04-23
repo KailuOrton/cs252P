@@ -2,6 +2,22 @@
 <html>
 <head>
 <title>Polls WebApp for CS252</title>
+
+	<script defer src="/__/firebase/4.13.0/firebase-app.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCknV3FxNpNM1_KMZm1Baij0BaAW7Z-otM",
+    authDomain: "polled-1d02a.firebaseapp.com",
+    databaseURL: "https://polled-1d02a.firebaseio.com",
+    projectId: "polled-1d02a",
+    storageBucket: "polled-1d02a.appspot.com",
+    messagingSenderId: "540632836416"
+  };
+  //firebase.initializeApp(config);
+  </script>
+
 <!-- update the version number as needed -->
     <script defer src="/__/firebase/4.13.0/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
@@ -13,6 +29,9 @@
     <script defer src="/__/firebase/init.js"></script>
 
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.0/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-kCsv8pSAWtRge/+zcLDeqwoWhTQSUX2esQPYOsocgrg1eMj7T2wrTJP348T3mpBU" crossorigin="anonymous">
+
+    <script src="app.js"></script>
+
     <style>
 	h1{
 		font-family: sans-serif; 
