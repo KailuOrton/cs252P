@@ -15,12 +15,13 @@
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.0/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-kCsv8pSAWtRge/+zcLDeqwoWhTQSUX2esQPYOsocgrg1eMj7T2wrTJP348T3mpBU" crossorigin="anonymous">
     <style>
 	h1{
-		font-size: 300%;
+		font-family: sans-serif; 
 		text-align: center;
 		color: rgb(18, 40, 40);
+
 	}
-	h2{
-		font-size: 200%;
+	h3{
+		font-family: sans-serif; 
 		text-align: center;
 		color: rgb(18, 40, 40);
 	}
@@ -28,7 +29,7 @@
 	body{
 		background-size: cover;
 		
-		font-family: sans-serif;
+		font-family: Comic Sans MS;  
 	}
 	label{
 		text-align:right;
@@ -69,7 +70,7 @@
 		height:420px;
 		background: transparent;
 		color: rgb(44, 125, 120);
-		top: 50%;
+		top: 30%;
 		left: 50%;
 		position: absolute;
 		transform: translate(-50%, -50%);
@@ -101,15 +102,18 @@
 </head>
 <body>
 
-<h1>Welcome To Polls</h1>
 
-<h2>Login</h2>
 
 <div class = "loginbox">
 <form>
 
+	<center>
+	<h1>Welcome to Polls</h1>
+	<br>
+	<h3>Login</h3>
+	<br>
 
-	
+	</center>
 
 	<label for="email"><b>Email</b></label><br>
 	<input id="txtuser" type="email" required="Please enter an email" placeholder="Email" autofocus name = "email">
