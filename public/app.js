@@ -9,7 +9,7 @@ var config = {
 };
 firebase.initializeApp(config);
 
-function initApp(){
+/*function initApp(){
   //Get all elements
   const getEmail = document.getElementById('txtuser');
   console.log(getEmail);
@@ -23,7 +23,7 @@ function initApp(){
     getLogin.addEventListener('click', e=>{
       const email = getEmail.value;
       const pass = getPassword.value;
-      const auth = firebase.auth();
+      //const auth = firebase.auth();
 
       if(email != null){
         console.log(email);
@@ -31,8 +31,13 @@ function initApp(){
       else{
         console.log("I got nothing");
       }
-      const promise = auth.signInWithEmailAndPassword(email,pass);
-      promise.catch(e => console.log(e.message));
+      firebase.auth().signInWithEmailAndPassword(email, pass).catch(function(error) {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorMessage);
+      window.alert("Error: " + errorMessage);
+      });
+      console.log("good shit"); 
     });
   }
   else{
@@ -44,11 +49,14 @@ function initApp(){
     console.log("inside sign up");
     getSignUp.addEventListener('click', e=>{
       console.log("after the click");
-      const email = getEmail.value;
-      const pass = getPassword.value;
-      const auth = firebase.auth();
+      //const email = getEmail.value;
+      //const pass = getPassword.value;
+      //const auth = firebase.auth();
 
-      if(email != null){
+      const user_email = document.getElementById('txtuser').value;
+      const user_pass = document.getElementById('txtpass').value;
+
+      /*if(email){
         console.log(email);
       }
       else{
@@ -56,20 +64,30 @@ function initApp(){
       }
       const promise = auth.createUserWithEmailAndPassword(email, pass);
       promise.catch(e => console.log(e.message));
+    });*/
+/*s      console.log("before creating");
+      firebase.auth().createUserWithEmailAndPassword(user_email, user_pass).catch(function(error) {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorMessage);
+      window.alert("Error: " + errorMessage);
+      }); 
+      console.log("created success!")
+      console.log("signed up with email " + userEmail);
     });
   }
   else{
     console.log("singup NULL AF");
   }
   //add a realtime authentication listener
-  /*firebase.auth().onAuthStateChanged(function(user){
+  firebase.auth().onAuthStateChanged(function(user){
     if(user){
       console.log("logged in");
     }
     else{
       console.log("not logged");
     }
-  });*/
+  });
 
 };
 
