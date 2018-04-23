@@ -1,40 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-<<<<<<< HEAD
-    <title>Sign Up!</title>
-    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-messaging.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-functions.js"></script>
-    <script src="app.js"></script>
-    <script src="login.js"></script>
-=======
 <title>Sign Up!</title>
-<script src="app.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
 
- <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.0/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-kCsv8pSAWtRge/+zcLDeqwoWhTQSUX2esQPYOsocgrg1eMj7T2wrTJP348T3mpBU" crossorigin="anonymous">
+    <script src="app.js"></script>
+    <script src="login.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.0/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-kCsv8pSAWtRge/+zcLDeqwoWhTQSUX2esQPYOsocgrg1eMj7T2wrTJP348T3mpBU" crossorigin="anonymous">
 
-<script type=""></script>>
->>>>>>> 5b982d92cd42390fe21fa81745cefeaa25739602
 <style>
-
-
 body {
     
     background-size: cover;
         
     font-family: Comic Sans MS;
 }
-
-
 input[type=text], input[type=password], input[type=email] {
     width: 100%;
     padding: 12px 20px;
@@ -43,13 +27,11 @@ input[type=text], input[type=password], input[type=email] {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
-
 label{
     text-align:right;
     font-size: 150%;
     color: rgb(18, 40, 40);
 }
-
 button {
     background-color: rgb(40, 76, 76);
     color: white;
@@ -60,11 +42,9 @@ button {
     width: 100%;
     background-position: center;
 }
-
 button:hover {
     opacity:0.8;
 }
-
 .signupbox {
         width: 320px;
         height:420px;
@@ -76,7 +56,6 @@ button:hover {
         transform: translate(-50%, -50%);
         box-sizing: border-box;
 }
-
 .footer {
         position: fixed;
         left: 0;
@@ -88,29 +67,19 @@ button:hover {
         text-align: left;
         font-size: 120%;
 }
-
 h1{
         font-family: sans-serif; 
         text-align: center;
         color: rgb(18, 40, 40);
-
 }
-
 </style>
 </head>
 <body>
-
-<form>
   <div class="container">
     
     
     
     <div class = "signupbox">
-<<<<<<< HEAD
-        <label id="txtuser" for="user"><b>Choose a username</b></label>
-        <input type="email" placeholder="Enter Username" name="user" required autofocus>
-
-=======
 
         <center>
         <h1>Sign Up!</h1>
@@ -121,24 +90,22 @@ h1{
 
 
 
-        <label id="txtuser" for="user"><b>Choose an Email</b></label>
-        <input type="email" placeholder="Enter Email" name="user" required autofocus>
+        <label for="user"><b>Choose an Email</b></label>
+        <input id="txtuser" type="email" placeholder="Enter Email" name="user" required autofocus>
 
->>>>>>> 5b982d92cd42390fe21fa81745cefeaa25739602
-        <label id="txtpass" for="pass"><b>Choose a password</b></label>
-        <input type="password" placeholder="Enter Password" name="pass" required>
+        <label for="pass"><b>Choose a password</b></label>
+        <input id="txtpass" type="password" placeholder="Enter Password" name="pass" required>
 
         <label for="reppass"><b>Repeat Password</b></label>
         <input type="password" placeholder="Repeat Password" name="reppass" required>
     
     
         <br>
-        <button id="signupButton" type="submit">Sign Up</button>
+        <button onclick="signUp()" id="signupButton">Sign Up</button>
     
     </div>
 
   </div>
-</form>
 
 <div class="footer">
   <p>A CS 252 Production</p>

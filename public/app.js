@@ -1,13 +1,13 @@
 //load firebase
 var config = {
-    apiKey: "AIzaSyCknV3FxNpNM1_KMZm1Baij0BaAW7Z-otM",
-    authDomain: "polled-1d02a.firebaseapp.com",
-    databaseURL: "https://polled-1d02a.firebaseio.com",
-    projectId: "polled-1d02a",
-    storageBucket: "polled-1d02a.appspot.com",
-    messagingSenderId: "540632836416"
-};
-firebase.initializeApp(config);
+    apiKey: "AIzaSyBEONVRaw91KgzM5p86uv0qRnG90KSNE_0",
+    authDomain: "polls-4fa84.firebaseapp.com",
+    databaseURL: "https://polls-4fa84.firebaseio.com",
+    projectId: "polls-4fa84",
+    storageBucket: "",
+    messagingSenderId: "820921347318"
+  };
+  firebase.initializeApp(config);
 
 /*function initApp(){
   //Get all elements
