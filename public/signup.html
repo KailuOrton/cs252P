@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
     <title>Sign Up!</title>
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-auth.js"></script>
@@ -10,18 +11,31 @@
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-functions.js"></script>
     <script src="app.js"></script>
     <script src="login.js"></script>
+=======
+<title>Sign Up!</title>
+<script src="app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-database.js"></script>
+
+ <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.0/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-kCsv8pSAWtRge/+zcLDeqwoWhTQSUX2esQPYOsocgrg1eMj7T2wrTJP348T3mpBU" crossorigin="anonymous">
+
+<script type=""></script>>
+>>>>>>> 5b982d92cd42390fe21fa81745cefeaa25739602
 <style>
 
+
 body {
-    background-color: rgb(44, 125, 120);
-    background: url(mexico.jpg); 
+    
     background-size: cover;
         
-    font-family: sans-serif;
+    font-family: Comic Sans MS;
 }
 
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -56,11 +70,30 @@ button:hover {
         height:420px;
         background: transparent;
         color: rgb(44, 125, 120);
-        top: 50%;
+        top: 30%;
         left: 50%;
         position: absolute;
         transform: translate(-50%, -50%);
         box-sizing: border-box;
+}
+
+.footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 10%;
+        background-color: rgb(40, 76, 76);
+        color: white;
+        text-align: left;
+        font-size: 120%;
+}
+
+h1{
+        font-family: sans-serif; 
+        text-align: center;
+        color: rgb(18, 40, 40);
+
 }
 
 </style>
@@ -69,13 +102,29 @@ button:hover {
 
 <form>
   <div class="container">
-    <h1 style = "text-align: center">Sign Up</h1>
-    <p style = "text-align: center">Create an account!</p>
+    
+    
     
     <div class = "signupbox">
+<<<<<<< HEAD
         <label id="txtuser" for="user"><b>Choose a username</b></label>
         <input type="email" placeholder="Enter Username" name="user" required autofocus>
 
+=======
+
+        <center>
+        <h1>Sign Up!</h1>
+        <br>
+        <p>Create an account!</p>
+        <br>
+        </center>
+
+
+
+        <label id="txtuser" for="user"><b>Choose an Email</b></label>
+        <input type="email" placeholder="Enter Email" name="user" required autofocus>
+
+>>>>>>> 5b982d92cd42390fe21fa81745cefeaa25739602
         <label id="txtpass" for="pass"><b>Choose a password</b></label>
         <input type="password" placeholder="Enter Password" name="pass" required>
 
@@ -90,6 +139,10 @@ button:hover {
 
   </div>
 </form>
+
+<div class="footer">
+  <p>A CS 252 Production</p>
+</div>
 
 </body>
 </html>

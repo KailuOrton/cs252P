@@ -2,6 +2,9 @@
 <html>
 <head>
 <title>Post</title>
+
+<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.0/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-kCsv8pSAWtRge/+zcLDeqwoWhTQSUX2esQPYOsocgrg1eMj7T2wrTJP348T3mpBU" crossorigin="anonymous">
+
 <style>
 .inline-div {
     display:inline-block;
@@ -14,37 +17,126 @@
     background: rgb(44, 125, 120);
     padding: 20px;
     width: 200px;
-    height: 70px;
+    height: 100px;
 	
 	font-family: Comic Sans MS;     
     color: white;
 }
+.inline-txtarea:hover{
+	opacity: 0.9;
+}
 .container{
 
 }
+
+button{
+
+	background-color: rgb(44,125,120);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-family: Comic Sans MS; 
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+button:hover{
+	opacity: 0.8;
+}
+
+h1{
+		font-family: Comic Sans MS; 
+		text-align: center;
+		font-size: 300%;
+		color: rgb(18,40,40);
+
+
+}
+label{
+		font-family: Comic Sans MS; 
+		font-size: 150%;
+		color: rgb(18, 40, 40);
+	}
+
+
+.footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 10%;
+        background-color: rgb(40, 76, 76);
+        color: white;
+        text-align: left;
+        font-size: 120%;
+}
+
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    opacity: 0.8;
+}
+
+.active {
+    background-color: rgb(40, 76, 76);
+}
+
+
 
 </style>
 </head>
 <body>
 
 <form>
+	<ul>
+  		<li><a class="active" href="voteorpost.html">Home</a></li>
+  
+  		<li><a href="vote.html">Vote</a></li>
+  		</ul>
 	<div class="container">
+		
+		
 		<center>
 		<h1>Post your Question!</h1>
 		<br>
 
 		<div class="inline-div">
     	<label for ="question">Question</label><br>
-    	<textarea cols="30" rows="15" class="inline-txtarea" name = "question" required></textarea>
+    	<textarea cols="30" rows="15" class="inline-txtarea" name = "question" required autofocus></textarea>
 		</div>
 		<br>
 		<br>
 		<div class="inline-div">
-    	<label for ="a1">Answer1</label><br>
+    	<label for ="a1">Answer 1</label><br>
     	<textarea cols="30" rows="15" class="inline-txtarea" name = "a1" required></textarea>
 		</div>
 		<div class="inline-div">
-    	<label for ="a2">Answer1</label><br>
+    	<label for ="a2">Answer 2</label><br>
     	<textarea cols="30" rows="15" class="inline-txtarea" name = "a2" required></textarea>
 		</div>
 
@@ -53,9 +145,16 @@
 		<button type = "submit" title="Press this to post your question">Post</button>
 
 
-</center>
+	</center>
+<div class="footer">
+    
+  <p>A CS 252 Production</p>
+</div>
+
 </div>
 </form>
+
+
 
 </body>
 </html>
