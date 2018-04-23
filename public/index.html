@@ -1,16 +1,120 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html>
 <head>
-	<base href = "/">
-	<meta charset="UTF-8">
-	<title>vote</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.0/superhero/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-	<script src="https://code.angularjs.org/1.6.9/angular-route.js"></script>
-	<script src="app.js"></script>
-	<script src="node_modules/angular-jwt/dist/angular"></script>
+<title>Polls WebApp for CS252</title>
+<!-- update the version number as needed -->
+    <script defer src="/__/firebase/4.13.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/4.13.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/4.13.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/4.13.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/4.13.0/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.0/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-kCsv8pSAWtRge/+zcLDeqwoWhTQSUX2esQPYOsocgrg1eMj7T2wrTJP348T3mpBU" crossorigin="anonymous">
+    <style>
+	h1{
+		font-size: 300%;
+		text-align: center;
+		color: rgb(18, 40, 40);
+	}
+	h2{
+		font-size: 200%;
+		text-align: center;
+		color: rgb(18, 40, 40);
+	}
+
+	body{
+		background-size: cover;
+		
+		font-family: sans-serif;
+	}
+	label{
+		text-align:right;
+		font-size: 150%;
+		color: rgb(18, 40, 40);
+	}
+
+	input[type=text], input[type=password] {
+ 		width: 100%;
+     	padding: 12px 20px;
+    	margin: 8px 0;
+    	display: inline-block;
+    	border: 1px solid #ccc;
+   		box-sizing: border-box;
+   		
+
+
+   	}
+
+   	button {
+    	background-color: rgb(40, 76, 76);
+    	color: white;
+    	padding: 14px 20px;
+    	margin: 8px 0;
+    	border: none;
+    	cursor: pointer;
+    	width: 100%;
+    	background-position: center;
+	}
+
+	button:hover {
+    	opacity: 0.8;
+	}
+
+
+	.loginbox{
+		width: 320px;
+		height:420px;
+		background: transparent;
+		color: rgb(44, 125, 120);
+		top: 50%;
+		left: 50%;
+		position: absolute;
+		transform: translate(-50%, -50%);
+		box-sizing: border-box;
+	}
+
+	.loginbox a:hover{
+		opacity: 0.8;
+	}
+
+	a{
+		color: rgb(44, 125, 120);
+	}
+
+</style>
+
 </head>
 <body>
-	<div class="container" ng-view></div>
+
+<h1>Welcome To Polls</h1>
+
+<h2>Login</h2>
+
+<div class = "loginbox">
+<form>
+
+
+	
+
+	<label for="user"><b>Username</b></label><br>
+	<input type = "text" required="Please enter a username" placeholder="Username" autofocus name = "user">
+	<br>
+	
+	<br>
+	<label for="pass"><b>Password</b></label><br>
+	<input type = "password" required="Please enter a password" placeholder="Password" name = "pass">
+	<br>
+	<button type = "submit" title="Press this to Login">Login!</button>
+	<br><br>
+	No account? <a href="signup.html">Sign up</a>
+
+	</div>
+</form>
+
+
+
 </body>
 </html>
