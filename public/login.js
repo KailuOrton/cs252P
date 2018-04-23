@@ -1,7 +1,7 @@
 function initApp(){
 	var unsub = firebase.auth().onAuthStateChanged(function(user) {
 	if(user) {
-		console.log(user);
+		window.location.href = "voteorpost.html";
 	} else {
 		console.log('not logged in');	
 	}
