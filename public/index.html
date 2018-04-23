@@ -13,6 +13,8 @@
     <script defer src="/__/firebase/init.js"></script>
 
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.0/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-kCsv8pSAWtRge/+zcLDeqwoWhTQSUX2esQPYOsocgrg1eMj7T2wrTJP348T3mpBU" crossorigin="anonymous">
+    <script src="fbConfig.js"></script>
+    <script src="app.js"></script>
     <style>
 	h1{
 		font-size: 300%;
@@ -84,6 +86,18 @@
 		color: rgb(44, 125, 120);
 	}
 
+	.footer {
+   		position: fixed;
+   		left: 0;
+   		bottom: 0;
+   		width: 100%;
+   		height: 15%;
+   		background-color: rgb(40, 76, 76);
+   		color: white;
+   		text-align: left;
+   		font-size: 120%;
+	}
+
 </style>
 
 </head>
@@ -100,19 +114,24 @@
 	
 
 	<label for="user"><b>Username</b></label><br>
-	<input type = "text" required="Please enter a username" placeholder="Username" autofocus name = "user">
+	<input id="txtuser" type = "text" required="Please enter a username" placeholder="Username" autofocus name = "user">
 	<br>
 	
 	<br>
 	<label for="pass"><b>Password</b></label><br>
-	<input type = "password" required="Please enter a password" placeholder="Password" name = "pass">
+	<input id="txtpass" type = "password" required="Please enter a password" placeholder="Password" name = "pass">
 	<br>
-	<button type = "submit" title="Press this to Login">Login!</button>
+	<button id = "loginButton" tecype = "submit" title="Press this to Login">Login!</button>
 	<br><br>
 	No account? <a href="signup.html">Sign up</a>
 
 	</div>
 </form>
+
+<div class="footer">
+	<br>
+  <p>A CS 252 Production</p>
+</div>
 
 
 

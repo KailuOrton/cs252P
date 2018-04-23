@@ -1,14 +1,54 @@
 
+(function(){
   // Initialize Firebase
-var config = {
-  apiKey: "AIzaSyBEONVRaw91KgzM5p86uv0qRnG90KSNE_0",
-  authDomain: "polls-4fa84.firebaseapp.com",
-  databaseURL: "https://polls-4fa84.firebaseio.com",
-  projectId: "polls-4fa84",
-  storageBucket: "",
-  messagingSenderId: "820921347318"
-};
-firebase.initializeApp(config);
+/*  var config = {
+    apiKey: "AIzaSyBEONVRaw91KgzM5p86uv0qRnG90KSNE_0",
+    authDomain: "polls-4fa84.firebaseapp.com",
+    databaseURL: "https://polls-4fa84.firebaseio.com",
+    projectId: "polls-4fa84",
+    storageBucket: "",
+    messagingSenderId: "820921347318"
+  };
+  firebase.initializeApp(config);
+*/
+  //Get all elements
+  const getEmail = document.getElementById('txtuser').innerHTML;
+  const getPassword = document.getElementById('txtpass').innerHTML;
+  const getLogin = document.getElementById('LoginButton').innerHTML;
+  const getSignUp = document.getElementById('SignupButton').innerHTML; 
+
+  //add event listener for login
+  getLogin.addEventListener('click', e=>{
+    const email = getEmail.value;
+    const pass = getPassword.value;
+    const auth = firebase.auth();
+
+    const promise = auth.signInWithEmailAndPassword(email,pass);
+    promise.catch(e => console.log(e.message));
+  });
+
+  //add event listener for signup
+  getSignUp.addEventListener('click', e=>{
+    const email = getEmail.value;
+    const pass = getPassword.value;
+    const auth = firebase.auth();
+
+    const promise = auth.createUserWithEmailAndPassword(email, pass);
+    promise.catch(e => console.log(e.message));
+  });
+
+  //add a realtime authentication listener
+  firebase.auth().onAuthStateChanged(firebaseUser => {
+    if(firebaseUser){
+      console.log(firebaseUser);
+    }
+    else{
+      console.log('Not logged in');
+    }
+  });
+
+}()); 
+/*
 (function() {
   var app = angular.module('app', ['ngRoute', 'angular-jwt']);
   app.config(function($routeProvider, $locationProvider){
@@ -70,4 +110,4 @@ firebase.initializeApp(config);
     var vm = this;
     vm.title = "PollController"
   }
-}());
+}());*/
