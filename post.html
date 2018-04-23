@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Post</title>
+<style>
+.inline-div {
+    display:inline-block;
+}
+.inline-txtarea {
+    resize: none;
+    height:125px;
+
+    border-radius: 25px;
+    background: rgb(44, 125, 120);
+    padding: 20px;
+    width: 200px;
+    height: 70px;
+	
+	font-family: Comic Sans MS;     
+    color: white;
+}
+.container{
+
+}
+
+</style>
+</head>
+<body>
+
+<form>
+	<div class="container">
+		<center>
+		<h1>Post your Question!</h1>
+		<br>
+
+		<div class="inline-div">
+    	<label for ="question">Question</label><br>
+    	<textarea cols="30" rows="15" class="inline-txtarea" name = "question" required></textarea>
+		</div>
+		<br>
+		<br>
+		<div class="inline-div">
+    	<label for ="a1">Answer1</label><br>
+    	<textarea cols="30" rows="15" class="inline-txtarea" name = "a1" required></textarea>
+		</div>
+		<div class="inline-div">
+    	<label for ="a2">Answer1</label><br>
+    	<textarea cols="30" rows="15" class="inline-txtarea" name = "a2" required></textarea>
+		</div>
+
+		<br>
+		<br>
+		<button type = "submit" title="Press this to post your question">Post</button>
+
+
+</center>
+</div>
+</form>
+
+</body>
+</html>
