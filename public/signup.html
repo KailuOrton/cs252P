@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Sign Up!</title>
+<script src="app.js"></script>
 <style>
 
 body {
@@ -65,10 +66,10 @@ button:hover {
     <p style = "text-align: center">Create an account!</p>
     
     <div class = "signupbox">
-        <label for="user"><b>Choose a username</b></label>
-        <input type="text" placeholder="Enter Username" name="user" required autofocus>
+        <label id="txtuser" for="user"><b>Choose a username</b></label>
+        <input type="email" placeholder="Enter Username" name="user" required autofocus>
 
-        <label for="pass"><b>Choose a password</b></label>
+        <label id="txtpass" for="pass"><b>Choose a password</b></label>
         <input type="password" placeholder="Enter Password" name="pass" required>
 
         <label for="reppass"><b>Repeat Password</b></label>

@@ -1,53 +1,82 @@
+//load firebase
+var config = {
+    apiKey: "AIzaSyCknV3FxNpNM1_KMZm1Baij0BaAW7Z-otM",
+    authDomain: "polled-1d02a.firebaseapp.com",
+    databaseURL: "https://polled-1d02a.firebaseio.com",
+    projectId: "polled-1d02a",
+    storageBucket: "polled-1d02a.appspot.com",
+    messagingSenderId: "540632836416"
+};
+firebase.initializeApp(config);
 
-(function(){
-  // Initialize Firebase
-/*  var config = {
-    apiKey: "AIzaSyBEONVRaw91KgzM5p86uv0qRnG90KSNE_0",
-    authDomain: "polls-4fa84.firebaseapp.com",
-    databaseURL: "https://polls-4fa84.firebaseio.com",
-    projectId: "polls-4fa84",
-    storageBucket: "",
-    messagingSenderId: "820921347318"
-  };
-  firebase.initializeApp(config);
-*/
+function initApp(){
   //Get all elements
-  const getEmail = document.getElementById('txtuser').innerHTML;
-  const getPassword = document.getElementById('txtpass').innerHTML;
-  const getLogin = document.getElementById('LoginButton').innerHTML;
-  const getSignUp = document.getElementById('SignupButton').innerHTML; 
+  const getEmail = document.getElementById('txtuser');
+  console.log(getEmail);
+  const getPassword = document.getElementById('txtpass');
+  console.log(getPassword);
+  const getLogin = document.getElementById('loginButton');
+  const getSignUp = document.getElementById('signupButton'); 
 
   //add event listener for login
-  getLogin.addEventListener('click', e=>{
-    const email = getEmail.value;
-    const pass = getPassword.value;
-    const auth = firebase.auth();
+  if(getLogin){
+    getLogin.addEventListener('click', e=>{
+      const email = getEmail.value;
+      const pass = getPassword.value;
+      const auth = firebase.auth();
 
-    const promise = auth.signInWithEmailAndPassword(email,pass);
-    promise.catch(e => console.log(e.message));
-  });
+      if(email != null){
+        console.log(email);
+      }
+      else{
+        console.log("I got nothing");
+      }
+      const promise = auth.signInWithEmailAndPassword(email,pass);
+      promise.catch(e => console.log(e.message));
+    });
+  }
+  else{
+    console.log("login NULL AF");
+  }
 
   //add event listener for signup
-  getSignUp.addEventListener('click', e=>{
-    const email = getEmail.value;
-    const pass = getPassword.value;
-    const auth = firebase.auth();
+  if(getSignUp){
+    console.log("inside sign up");
+    getSignUp.addEventListener('click', e=>{
+      console.log("after the click");
+      const email = getEmail.value;
+      const pass = getPassword.value;
+      const auth = firebase.auth();
 
-    const promise = auth.createUserWithEmailAndPassword(email, pass);
-    promise.catch(e => console.log(e.message));
-  });
-
+      if(email != null){
+        console.log(email);
+      }
+      else{
+        console.log("I got nothing");
+      }
+      const promise = auth.createUserWithEmailAndPassword(email, pass);
+      promise.catch(e => console.log(e.message));
+    });
+  }
+  else{
+    console.log("singup NULL AF");
+  }
   //add a realtime authentication listener
-  firebase.auth().onAuthStateChanged(firebaseUser => {
-    if(firebaseUser){
-      console.log(firebaseUser);
+  /*firebase.auth().onAuthStateChanged(function(user){
+    if(user){
+      console.log("logged in");
     }
     else{
-      console.log('Not logged in');
+      console.log("not logged");
     }
-  });
+  });*/
 
-}()); 
+};
+
+//call function when the window loads
+window.onload = function() {
+  initApp();
+}; 
 /*
 (function() {
   var app = angular.module('app', ['ngRoute', 'angular-jwt']);
