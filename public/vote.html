@@ -9,14 +9,15 @@
 <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-database.js"></script>
 <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.0/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-kCsv8pSAWtRge/+zcLDeqwoWhTQSUX2esQPYOsocgrg1eMj7T2wrTJP348T3mpBU" crossorigin="anonymous">
 
+<script src="jquery-3.3.1.min.js"></script>
 <script src="app.js"></script>
 <script src="vote.js"></script>
 <style>
 
-ul {
+/*ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0;v
     overflow: hidden;
     background-color: #333;
 }
@@ -38,10 +39,12 @@ li a:hover {
     opacity: 0.8;
 }
 
+
+
 .active {
     background-color: rgb(40, 76, 76);
 }
-
+*/
 .footer {
         position: fixed;
         left: 0;
@@ -59,11 +62,46 @@ li a:hover {
 </head>
 <body>
 
-<ul>
-  <li><a class="active" href="voteorpost.html">Home</a></li>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<table id="ex-table">
+    <thead>
+        <tr>
+        <th>Question</th>
+        <th>Answer 1</th>
+        <th>Answer 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr id="tr">
+        <td id="Question"></td>
+        <td id="answer1"></td>
+        <td id="answer2"></td>
+       </tr>
+    </tbody>   
+<!--  <p id="questlist">
   
-  <li><a href="post.html">Post</a></li>
-  </ul>
+  </p>
+
+  <p id="a1button">
+  </p>
+
+  <p id="a2button">
+  </p>
+-->
+
+  
+
+
+
 
 <div class="footer">
     
