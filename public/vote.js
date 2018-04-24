@@ -10,7 +10,7 @@ function vote(){
 	ref.on('value', gotVote, errVote);
 }
 function gotVote(vote){
-	console.log("In here");
+	console.log("In here vote");
 	var posts = vote.val();
 	var keys = Object.keys(posts);
 	var content = '';
