@@ -59,10 +59,13 @@ button {
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
-    border: none;
     cursor: pointer;
     width: 100%;
     background-position: center;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
 }
 .vote {
     background-color:  rgb(191, 53, 53);
@@ -76,8 +79,16 @@ button {
 
 button:hover {
     opacity:0.8;
+    outline:none;
+    border:none;
 }
-
+button:active{
+    background-color: green;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    outline: none;
+    border: none;
+}
 
 </style>
 </head>

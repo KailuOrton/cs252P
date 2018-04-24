@@ -16,4 +16,10 @@ function post(){
 	database.ref('posts/' + ClientKey + '/a2').set(a2);
 	database.ref('posts/' + ClientKey + '/c1').set(c1);
 	database.ref('posts/' + ClientKey + '/c2').set(c2);
+
+	document.getElementById('mainQ').value = "";
+	document.getElementById('mainA1').value = "";
+	document.getElementById('mainA2').value = "";
+
+	alert("You have successfully Posted!");
 };
