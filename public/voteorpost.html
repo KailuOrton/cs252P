@@ -12,9 +12,6 @@ body {
     font-family: sans-serif;
 }
 * {box-sizing: border-box}
-
-
-
 /* Set a style for all buttons */
 button {
     background-color: rgb(40, 76, 76);
@@ -26,14 +23,9 @@ button {
     width: 100%;
     background-position: center;
 }
-
-
 button:hover {
     opacity:0.8;
 }
-
-
-
 /* Float cancel and signup buttons and add an equal width */
 .vote {
     background-color:  rgb(191, 53, 53);
@@ -44,13 +36,17 @@ button:hover {
   float: right;
   width: 45%;
 }
+.stats{
+    background-color: rgb(108, 45, 121);
+        color: white;
+    float: middle;
+    width: 45%;
+}
 
 /* Add padding to container elements */
 .container {
     padding: 10px;
-
 }
-
 .footer {
         position: fixed;
         left: 0;
@@ -62,7 +58,6 @@ button:hover {
         text-align: left;
         font-size: 120%;
 }
-
 </style>
 </head>
 <body>
@@ -83,6 +78,13 @@ button:hover {
             <button type="submit" class="vote">Vote</button>
         </form>
     
+  </div>
+  <div class="container">
+    <center>
+      <form action = "stats.html">
+            <button type="submit" class="stats">Stats</button>
+        </form>
+    </center>
   </div>
 
 <div class="footer">
