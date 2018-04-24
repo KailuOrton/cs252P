@@ -5,11 +5,28 @@ function vote(){
 	ref.on('value', gotVote, errVote);
 }
 function gotVote(vote){
+	console.log("In here");
 	var posts = vote.val();
 	var keys = Object.keys(posts);
 	var content = '';
 	//console.log(keys);
+	var ref1 = database.ref('posts');
+	ref1.on('child_added', function(snapshot, prevChildKey){
+		var newPost = snapshot.val();
+		//console.log("Question ", newPost.question);
+		//console.log("Answer1 ", newPost.a1);
+		//console.log("Answer2 ", newPost.a2);
+		content += '<tr>';
+        content += '<td>' + newPost.question + '</td>'; //column1
+        content += '<td><button class="vote">' + newPost.a1 + '</button></td>';//column2
+        content += '<td><button class="post">' + newPost.a2 + '</button></td>';//column3
+        content += '</tr>';
 
+
+	});
+	$('#ex-table').append(content);
+
+	/*
 	for(var i = 0; i < keys.length; i++){
 		var k = keys[i];
 		var question1 = posts[k].question;
@@ -25,7 +42,7 @@ function gotVote(vote){
 
         $('#ex-table').append(content);
 		//console.log(question, a1, a2);
-		
+		*/
 		/*var quest = document.createElement("text");
 		var textnode1 = document.createTextNode(question1);
 		quest.appendChild(textnode1);
@@ -42,7 +59,7 @@ function gotVote(vote){
 		document.getElementById('a2button').appendChild(a2b);
 		*/
 		
-	}
+	//}
 
 
 }
