@@ -23,3 +23,16 @@ function post(){
 
 	alert("You have successfully Posted!");
 };
+
+function signOut(){
+	firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+        console.log("signout done");
+        document.location.href = '/index.html';     
+        alert("successfully singed out!")      
+    }, function(error) {
+       		// An error happened.
+       		alert("An error has occured while signing out!");
+            console.log(error);
+        });
+}
