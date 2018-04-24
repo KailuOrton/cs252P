@@ -1,4 +1,5 @@
-var counterMain = 0;
+var counterMain1 = 0;
+var counterMain2 = 0;
 var counterSimple = 0;
 var idMain = '';
 var arrIds = [];
@@ -78,18 +79,22 @@ function gotVote(vote){
 
 }
 
-function update(){
-	console.log(counterMain);
-	database.ref('posts/' + idMain + '/').update({c1: counterMain});
+function update1(){
+	console.log(counterMain1);
+	database.ref('posts/' + idMain + '/').update({c1: counterMain1});
 }
 
+function update2(){
+	console.log(counterMain2);
+	database.ref('posts/' + idMain + '/').update({c2: counterMain2})
+}
 function answer1click(clicked_id){
 	console.log("answer 1 clicked, id is: ");
 	console.log(clicked_id);
 	idMain = clicked_id;
 	var refCount = database.ref('posts/' + clicked_id + '/c1');
 	refCount.on('value', function(snapshot){
-		counterMain = snapshot.val() + 1;
+		counterMain1 = snapshot.val() + 1;
 		console.log("snapshot val is ");
 	})
 	//database.ref('posts/' + idMain + '/').update({c1: c1+1});
@@ -104,16 +109,24 @@ function answer1click(clicked_id){
 	console.log("the counter is");
 	console.log(counter1);
 	*/
-	update();
+	update1();
 }
 
 function answer2click(clicked_id){
 	console.log("answer 2 clicked, id is: ");
 	console.log(clicked_id);
+
+	idMain = clicked_id;
+	var refCount = database.ref('posts/' + clicked_id + '/c2');
+	refCount.on('value', function(snapshot){
+		counterMain2 = snapshot.val() + 1;
+		console.log("snapshot val is ");
+	})
 	/*
 	console.log("the counter is");
 	console.log(counter2);
 	*/
+	update2();
 }
 function errVote(err){
 	console.log(err);
