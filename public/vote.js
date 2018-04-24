@@ -12,14 +12,17 @@ function gotVote(vote){
 	//console.log(keys);
 	var ref1 = database.ref('posts');
 	ref1.on('child_added', function(snapshot, prevChildKey){
+		console.log(snapshot.key);
 		var newPost = snapshot.val();
+		var tempid = snapshot.key;
 		//console.log("Question ", newPost.question);
 		//console.log("Answer1 ", newPost.a1);
 		//console.log("Answer2 ", newPost.a2);
+
 		content += '<tr>';
         content += '<td>' + newPost.question + '</td>'; //column1
-        content += '<td><button class="vote">' + newPost.a1 + '</button></td>';//column2
-        content += '<td><button class="post">' + newPost.a2 + '</button></td>';//column3
+        content += '<td><button class="vote" id=' + tempid + ' onclick="answer1click(this.id)">' + newPost.a1 + '</button></td>';//column2
+        content += '<td><button class="post" id=' + tempid + ' onclick="answer2click(this.id)">' + newPost.a2 + '</button></td>';//column3
         content += '</tr>';
 
 
@@ -64,6 +67,14 @@ function gotVote(vote){
 
 }
 
+function answer1click(clicked_id){
+	console.log("answer 1 clicked, id is: ");
+	console.log(clicked_id);
+}
+function answer2click(clicked_id){
+	console.log("answer 2 clicked, id is: ");
+	console.log(clicked_id);
+}
 function errVote(err){
 	console.log(err);
 }
