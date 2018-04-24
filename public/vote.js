@@ -76,6 +76,18 @@ function answer2click(clicked_id){
 function errVote(err){
 	console.log(err);
 }
+function signOut(){
+	firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+        console.log("signout done");
+        document.location.href = '/index.html';     
+        alert("successfully signed out!")      
+    }, function(error) {
+       		// An error happened.
+       		alert("An error has occured while signing out!");
+            console.log(error);
+        });
+}
 window.onload = function(){
 	vote();
 }

@@ -89,6 +89,17 @@ button:active{
     outline: none;
     border: none;
 }
+.button2 button{
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 9px 12px;
+    text-align: center;
+    text-decoration: none;
+    font-family: sans-serif; 
+    display: inline-block;
+    cursor: pointer;
+}
 
 </style>
 </head>
@@ -97,7 +108,7 @@ button:active{
     <li><a class="active" href="voteorpost.html">Home</a></li>
     <li><a href="post.html">Post</a></li>
     <li><a href="stats.html">Stats</a></li>
-
+    <li onclick="signOut()" style="float:right" class="button2"><button>Sign Out</button></li>
 </ul>
 <table id="ex-table" class="table table-striped table-dark">
     <thead>

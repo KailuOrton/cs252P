@@ -45,6 +45,18 @@ function gotStats(){
     });	
 	$('#ex-table').append(content);
 }
+function signOut(){
+	firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+        console.log("signout done");
+        document.location.href = '/index.html';     
+        alert("successfully signed out!")      
+    }, function(error) {
+       		// An error happened.
+       		alert("An error has occured while signing out!");
+            console.log(error);
+        });
+}
 function errStats(err){
 	console.log(err);
 }
